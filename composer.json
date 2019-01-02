@@ -1,0 +1,24 @@
+{
+    "name": "ichhim/aba-payway",
+    "description": "A package for intergration with ABA's Payway",
+    "keywords": ["template", "composer", "package"],
+    "license": "DBAD",
+    "authors": [
+        {
+            "name": "Ich Him",
+            "email": "chhoeachim@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.1"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "IchHim": "src/"
+        }
+    }
+}
