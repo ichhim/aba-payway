@@ -9,7 +9,6 @@
             "email": "chhoeachim@gmail.com"
         }
     ],
-    "type": "project",
     "require": {
 		"php": ">=7.1"
     },
