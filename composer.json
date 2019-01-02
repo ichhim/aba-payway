@@ -2,7 +2,7 @@
     "name": "ichhim/aba-payway",
     "description": "A package for intergration with ABA's Payway",
     "keywords": ["template", "composer", "package"],
-    "license": "DBAD",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ich Him",
