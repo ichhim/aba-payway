@@ -1,7 +1,7 @@
 {
     "name": "ichhim/aba-payway",
     "description": "A package for intergration with ABA's Payway",
-    "keywords": ["template", "composer", "package"],
+    "keywords": ["aba", "aba-payway", "package", "php-package"],
     "license": "MIT",
     "authors": [
         {
