@@ -2,6 +2,9 @@
 
 namespace IchHim\AbaPayway;
 
+/**
+ * @author Ich Him [chhoeachim@gmail.com]
+ */
 class CreateTransaction extends Payway
 {
     /**
