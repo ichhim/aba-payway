@@ -1,6 +1,6 @@
 <?php
 
-namespace IchHim;
+namespace IchHim\AbaPayway;
 
 class Payway
 {
