@@ -19,11 +19,14 @@ use IchHim\AbaPayway\CreateTransaction;
 
 $merchant_id = '112233'; // the `merchant_id` that provided by ABA
 $api_key = 'some-unique-key'; // the `api_key` that provided by ABA
+
+// the required params
 $transaction_id = uniqid();
+$amount = 1.00;
 
 $create_transaction = new CreateTransaction($merchant_id, $api_key);
 
-return $create_transaction->getHash($transaction_id, 1.00);
+return $create_transaction->getHash($transaction_id, $amount);
 ```
 
 ### Check Transaction
@@ -33,6 +36,8 @@ use IchHim\AbaPayway\CheckTransaction;
 
 $merchant_id = '112233'; // the `merchant_id` that provided by ABA
 $api_key = 'some-unique-key'; // the `api_key` that provided by ABA
+
+// the required params
 $transaction_id = uniqid();
 
 $check_transaction = new CheckTransaction($merchant_id, $api_key);
