@@ -8,6 +8,8 @@ namespace IchHim\AbaPayway;
 class CreateTransaction extends Payway
 {
     /**
+     * Generate hash for `Create_Transaction` API
+     *
      * @param string $reference_id
      * @param float  $amount
      * @param array  $items
