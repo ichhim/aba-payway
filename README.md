@@ -1,15 +1,26 @@
-Composer Library Template
-=========================
+PHP - ABA Payway
+================
 
-If you are trying to create a new PHP Composer library, whether it will be going to submitted to packagist.org or just in your Github account, this template of files will surely help you make the process a lot easier and faster.
+Some descriptions.
 
 Features
 --------
 
-* PSR-4 autoloading compliant structure
-* Unit-Testing with PHPUnit
-* Comprehensive Guides and tutorial
-* Easy to use to any framework or even a plain php file
+* Generate a hash for **Create Transaction** API
 
+Examples
+--------
 
-I encourage that you put more information on this readme file instead of leaving it as is. See [How to make a README file](http://www.darwinbiler.com/designing-and-making-the-readme-file-for-your-github-repository/) for more info.
+### Create Transaction
+
+```php
+use IchHim\AbaPayway\CreateTransaction;
+
+$merchant_id = '112233'; // the `merchant_id` that provided by ABA
+$api_key = 'some-unique-key'; // the `api_key` that provided by ABA
+$transaction_id = uniqid();
+
+$create_transaction = new CreateTransaction($merchant_id, $api_key);
+
+return $create_transaction->getHash($transaction_id, 1.00);
+```
