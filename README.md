@@ -7,6 +7,7 @@ Features
 --------
 
 * Generate a hash for **Create Transaction** API
+* Generate a hash for **Check Transaction** API
 
 Examples
 --------
@@ -23,4 +24,18 @@ $transaction_id = uniqid();
 $create_transaction = new CreateTransaction($merchant_id, $api_key);
 
 return $create_transaction->getHash($transaction_id, 1.00);
+```
+
+### Check Transaction
+
+```php
+use IchHim\AbaPayway\CheckTransaction;
+
+$merchant_id = '112233'; // the `merchant_id` that provided by ABA
+$api_key = 'some-unique-key'; // the `api_key` that provided by ABA
+$transaction_id = uniqid();
+
+$check_transaction = new CheckTransaction($merchant_id, $api_key);
+
+return $check_transaction->getHash($transaction_id);
 ```
