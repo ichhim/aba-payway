@@ -79,7 +79,7 @@ class Payway
      *
      * @return string
      */
-    protected function makeHash($data)
+    public function makeHash($data)
     {
         $hash = hash_hmac($this->getAlgorithm(), $data, $this->getApiKey(), true);
 
