@@ -22,6 +22,13 @@ class Payway
     protected $api_key;
 
     /**
+     * The `hash_hmac` algorithm.
+     *
+     * @var string
+     */
+    protected $algorithm = 'sha512';
+
+    /**
      * @param string $merchant_id
      * @param string $api_key
      */
@@ -53,6 +60,13 @@ class Payway
         }
 
         throw new \Exception("`api_key` key must exists and not null.");
+    public function getAlgorithm()
+    {
+        if (isset($this->algorithm)) {
+            return $this->algorithm;
+        }
+
+        throw new \Exception("`algorithm` property must exists and not null.");
     }
 
     /**
@@ -62,7 +76,7 @@ class Payway
      */
     protected function makeHash($data)
     {
-        $hash = hash_hmac('sha512', $data, $this->getApiKey(), true);
+        $hash = hash_hmac($this->getAlgorithm(), $data, $this->getApiKey(), true);
 
         return base64_encode($hash);
     }
