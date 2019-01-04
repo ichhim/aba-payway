@@ -62,6 +62,9 @@ class Payway
         throw new \Exception("`api_key` property must exists and not null.");
     }
 
+    /**
+     * @return string
+     */
     public function getAlgorithm()
     {
         if (isset($this->algorithm)) {
