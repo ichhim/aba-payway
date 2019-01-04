@@ -47,7 +47,7 @@ class Payway
             return $this->merchant_id;
         }
 
-        throw new \Exception("`merchant_id` key must exists and not null.");
+        throw new \Exception("`merchant_id` property must exists and not null.");
     }
 
     /**
@@ -59,7 +59,9 @@ class Payway
             return $this->api_key;
         }
 
-        throw new \Exception("`api_key` key must exists and not null.");
+        throw new \Exception("`api_key` property must exists and not null.");
+    }
+
     public function getAlgorithm()
     {
         if (isset($this->algorithm)) {
